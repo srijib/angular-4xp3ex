@@ -1,5 +1,8 @@
 /* Global Styles */
+/* Global Styles */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 
+@import url('https://unpkg.com/ngx-bootstrap@5.1.1/datepicker/bs-datepicker.css');
 * {
   font-family: 'Roboto', Arial, sans-serif;
   color: #616161;

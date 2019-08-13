@@ -2,8 +2,37 @@
 
 <div class="container">
   <router-outlet></router-outlet>
-</div>
+</div> 
+<div style="float:left">
 
+<input type="text"
+           class="form-control"
+           [bsConfig]="bsConfig" disabled
+           #dp="bsDatepicker" style="border:none;
+            background: white"
+           bsDatepicker [(bsValue)]="bsValue">
+</div>
+  
+  <div style="float:right">
+    <button class="btn btn-success" (click)="dp.toggle()">Date Picker</button>
+  </div>
+
+<div style="clear:both">
+</div>
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
+ 
+
+<ng-template #template>
+  <div class="modal-header">
+    <bs-datepicker-inline [bsValue]="bsInlineValue"></bs-datepicker-inline>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
